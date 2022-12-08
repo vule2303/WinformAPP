@@ -1,0 +1,17 @@
+E:\VU\WinformAPP\BTPSo\BTPSo\bin\Debug\net6.0-windows\BTPSo.exe
+E:\VU\WinformAPP\BTPSo\BTPSo\bin\Debug\net6.0-windows\BTPSo.deps.json
+E:\VU\WinformAPP\BTPSo\BTPSo\bin\Debug\net6.0-windows\BTPSo.runtimeconfig.json
+E:\VU\WinformAPP\BTPSo\BTPSo\bin\Debug\net6.0-windows\BTPSo.dll
+E:\VU\WinformAPP\BTPSo\BTPSo\bin\Debug\net6.0-windows\BTPSo.pdb
+E:\VU\WinformAPP\BTPSo\BTPSo\obj\Debug\net6.0-windows\BTPSo.csproj.AssemblyReference.cache
+E:\VU\WinformAPP\BTPSo\BTPSo\obj\Debug\net6.0-windows\BTPSo.FORMMAIN.resources
+E:\VU\WinformAPP\BTPSo\BTPSo\obj\Debug\net6.0-windows\BTPSo.csproj.GenerateResource.cache
+E:\VU\WinformAPP\BTPSo\BTPSo\obj\Debug\net6.0-windows\BTPSo.GeneratedMSBuildEditorConfig.editorconfig
+E:\VU\WinformAPP\BTPSo\BTPSo\obj\Debug\net6.0-windows\BTPSo.AssemblyInfoInputs.cache
+E:\VU\WinformAPP\BTPSo\BTPSo\obj\Debug\net6.0-windows\BTPSo.AssemblyInfo.cs
+E:\VU\WinformAPP\BTPSo\BTPSo\obj\Debug\net6.0-windows\BTPSo.csproj.CoreCompileInputs.cache
+E:\VU\WinformAPP\BTPSo\BTPSo\obj\Debug\net6.0-windows\BTPSo.dll
+E:\VU\WinformAPP\BTPSo\BTPSo\obj\Debug\net6.0-windows\refint\BTPSo.dll
+E:\VU\WinformAPP\BTPSo\BTPSo\obj\Debug\net6.0-windows\BTPSo.pdb
+E:\VU\WinformAPP\BTPSo\BTPSo\obj\Debug\net6.0-windows\BTPSo.genruntimeconfig.cache
+E:\VU\WinformAPP\BTPSo\BTPSo\obj\Debug\net6.0-windows\ref\BTPSo.dll
