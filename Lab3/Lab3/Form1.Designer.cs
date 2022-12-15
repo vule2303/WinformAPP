@@ -180,7 +180,7 @@
             this.txtB.Size = new System.Drawing.Size(47, 23);
             this.txtB.TabIndex = 5;
             this.txtB.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            this.txtB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtB_KeyPress);
+            this.txtB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtA_KeyPress);
             // 
             // txtC
             // 
@@ -189,7 +189,7 @@
             this.txtC.Size = new System.Drawing.Size(47, 23);
             this.txtC.TabIndex = 5;
             this.txtC.TextChanged += new System.EventHandler(this.txtC_TextChanged);
-            this.txtC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtC_KeyPress);
+            this.txtC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtA_KeyPress);
             // 
             // label2
             // 

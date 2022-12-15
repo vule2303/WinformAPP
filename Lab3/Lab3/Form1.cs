@@ -25,9 +25,19 @@
             {
                 case 0:
                     {
-                        a = double.Parse(txtA.Text);
-                        cv = 2 * a * Math.PI;
-                        dt = a * a * Math.PI;
+                        if (txtA.Text == "")
+                        {
+                            MessageBox.Show("Nhập sai vui lòng nhập lại");
+                        } else
+                        {
+
+
+                            a = double.Parse(txtA.Text);
+
+                            cv = 2 * a * Math.PI;
+                            dt = a * a * Math.PI;
+                        }
+
                     }
                     break;
                 case 1:
@@ -50,6 +60,12 @@
                         a = double.Parse(txtA.Text);
                         b = double.Parse(txtB.Text);
                         c = double.Parse(txtC.Text);
+                        HTG z = new HTG(a, b, c);
+                        MessageBox.Show(z.KiemTraTG());
+                        cv = z.LayChuVi();
+                        dt = z.LayDienTich();
+
+
 
                     }
                     break;
@@ -57,16 +73,43 @@
             txtCV.Text = cv.ToString();
             txtS.Text = dt.ToString();
         }
-
+        public string _curChoose;
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.txtA.Visible = false;
-            this.txtB.Visible = false;
-            this.txtC.Visible = false;
-            this.label3.Visible = false;
-            this.label2.Visible = false;
-            this.label5.Visible = false;
-        }
+            
+                _curChoose = ((RadioButton)sender).Text;
+                disableAndReset();
+                switch (_curChoose)
+                {
+                    case "Hình tròn":
+                        lbla.Text = "Bán kính";
+                        txtA.Visible = true;
+                        break;
+                    case "Hình vuông":
+                        lbla.Text = "Cạnh";
+                        txtA.Visible = true;
+                        break;
+                    case "Hình chữ nhật":
+                        lbla.Text = "Cạnh dài";
+                        txtA.Visible = true;
+                        lblb.Text = "Cạnh rộng";
+                        txtB.Visible = true;
+                        break;
+                    case "Hình tam giác":
+                        lbla.Text = "Cạnh 1";
+                        txtA.Visible = true;
+                        lblb.Text = "Cạnh 2";
+                        txtB.Visible = true;
+                        label5.Text = "Cạnh 3";
+                        txtC.Visible = true;
+                        break;
+                    default:
+                        MessageBox.Show("What?");
+                        break;
+                }
+                return;
+            }
+        
 
         private void rdbtVuong_CheckedChanged(object sender, EventArgs e)
         {
@@ -101,7 +144,7 @@
 
         private void rdbtTamG_CheckedChanged(object sender, EventArgs e)
         {
-            
+
             this.label2.Visible = true;
             txtA.Visible = true;
             txtA.Enabled = true;
@@ -129,57 +172,57 @@
 
         private void txtA_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+            //
+            if (e.KeyChar == '.' && txtA.Text.IndexOf('.') != -1)
             {
                 e.Handled = true;
             }
         }
-
-        private void txtB_KeyPress(object sender, KeyPressEventArgs e)
+        public bool CountString(string a)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            if (a.IndexOf('.') != -1) 
+            return true;
+
+            return false;
+
+        }
+
+
+
+            private void textBox1_TextChanged(object sender, EventArgs e)
             {
-                e.Handled = true;
+
+            }
+
+            private void textBox2_TextChanged(object sender, EventArgs e)
+            {
+
+            }
+
+            private void txtC_TextChanged(object sender, EventArgs e)
+            {
+
+            }
+
+            private void rdbtTron_Click(object sender, EventArgs e)
+            {
+                this.label2.Text = "Bán kính";
+                this.label2.Visible = true;
+                txtA.Visible = true;
+                txtA.Enabled = true;
+
+                this.label5.Visible = false;
+                txtC.Visible = false;
+                txtC.Enabled = false;
+                this.label3.Visible = false;
+                txtB.Visible = false;
+                txtB.Enabled = false;
+
             }
         }
-
-        private void txtC_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtC_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rdbtTron_Click(object sender, EventArgs e)
-        {
-            this.label2.Text = "Bán kính";
-            this.label2.Visible = true;
-            txtA.Visible = true;
-            txtA.Enabled = true;
-
-            this.label5.Visible = false;
-            txtC.Visible = false;
-            txtC.Enabled = false;
-            this.label3.Visible = false;
-            txtB.Visible = false;
-            txtB.Enabled = false;
-
-        }
-    }
-}
+    } 
