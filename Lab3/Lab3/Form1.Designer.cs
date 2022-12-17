@@ -170,8 +170,7 @@
             this.txtA.Name = "txtA";
             this.txtA.Size = new System.Drawing.Size(47, 23);
             this.txtA.TabIndex = 5;
-            this.txtA.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.txtA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtA_KeyPress);
+        
             // 
             // txtB
             // 
@@ -179,8 +178,7 @@
             this.txtB.Name = "txtB";
             this.txtB.Size = new System.Drawing.Size(47, 23);
             this.txtB.TabIndex = 5;
-            this.txtB.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            this.txtB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtA_KeyPress);
+            this.txtB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtB_KeyPress);
             // 
             // txtC
             // 
@@ -188,8 +186,8 @@
             this.txtC.Name = "txtC";
             this.txtC.Size = new System.Drawing.Size(47, 23);
             this.txtC.TabIndex = 5;
-            this.txtC.TextChanged += new System.EventHandler(this.txtC_TextChanged);
-            this.txtC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtA_KeyPress);
+
+            this.txtC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtC_KeyPress);
             // 
             // label2
             // 
@@ -240,7 +238,7 @@
             this.txtCV.Name = "txtCV";
             this.txtCV.Size = new System.Drawing.Size(145, 23);
             this.txtCV.TabIndex = 5;
-            this.txtCV.TextChanged += new System.EventHandler(this.txtC_TextChanged);
+            this.txtCV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCV_KeyPress);
             // 
             // txtS
             // 
@@ -248,7 +246,7 @@
             this.txtS.Name = "txtS";
             this.txtS.Size = new System.Drawing.Size(145, 23);
             this.txtS.TabIndex = 5;
-            this.txtS.TextChanged += new System.EventHandler(this.txtC_TextChanged);
+            this.txtS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCV_KeyPress);
             // 
             // label6
             // 

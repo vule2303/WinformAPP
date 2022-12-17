@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Lab6.BT1" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABCQAACAAAACARAYAAAAAWAACAAAAAA=</HashCode>
+      <FileName>BT1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab6.BT2" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAYQACACABCYADKAIAACAEIQIAEAAQCACQAAABc=</HashCode>
+      <FileName>BT2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab6.Form1" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAACAAABAAAACAAAACAAA4AAAAAGAAAAAAAAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab6.HCN">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAABAAAAAQAAAAgAAAAAAAgAA=</HashCode>
+      <FileName>HCN.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab6.Program" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab6.Properties.Resources" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab6.Properties.Settings" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab6.HinhTron">
+    <Position X="4" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAACAAAIQA=</HashCode>
+      <FileName>HinhTron.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab6.HinhVuong">
+    <Position X="5.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAQAAAAEAAAAAAAAAAAAIAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>HinhVuong.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab6.HinhCN">
+    <Position X="2.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAgAAAAAAAAAAAAAAAAAAQAIAAAAAAAAACABAAAIAA=</HashCode>
+      <FileName>HinhCN.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab6.HinhTG">
+    <Position X="2.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAIAAAAAAAAAAAAAAIAiQAAAAAABAAAAAsAg=</HashCode>
+      <FileName>HinhTG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

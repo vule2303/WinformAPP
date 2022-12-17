@@ -2,7 +2,7 @@
 {
     public partial class Form1 : Form
     {
-        double a, b, c, cv, dt;
+        double a, b, c;
         public Form1()
         {
 
@@ -11,7 +11,8 @@
 
         private void btStart_Click(object sender, EventArgs e)
         {
-            double cv = 0; dt = 0;
+            double cv = 0, dt = 0;
+           
             int chon = 0;
             if (this.rdbtTron.Checked == true)
                 chon = 0;
@@ -21,22 +22,14 @@
                 chon = 2;
             if (this.rdbtTamG.Checked == true)
                 chon = 3;
+            
             switch (chon)
             {
                 case 0:
                     {
-                        if (txtA.Text == "")
-                        {
-                            MessageBox.Show("Nhập sai vui lòng nhập lại");
-                        } else
-                        {
-
-
-                            a = double.Parse(txtA.Text);
-
-                            cv = 2 * a * Math.PI;
-                            dt = a * a * Math.PI;
-                        }
+                        a = double.Parse(txtA.Text);
+                        cv = 2 * a * Math.PI;
+                        dt = a * a * Math.PI;
 
                     }
                     break;
@@ -65,56 +58,23 @@
                         cv = z.LayChuVi();
                         dt = z.LayDienTich();
 
-
-
                     }
                     break;
+                
             }
-            txtCV.Text = cv.ToString();
-            txtS.Text = dt.ToString();
+          
+
+            txtCV.Text = Math.Round(cv, 2).ToString();
+            txtS.Text = Math.Round(dt, 2).ToString();
         }
-        public string _curChoose;
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-                _curChoose = ((RadioButton)sender).Text;
-                disableAndReset();
-                switch (_curChoose)
-                {
-                    case "Hình tròn":
-                        lbla.Text = "Bán kính";
-                        txtA.Visible = true;
-                        break;
-                    case "Hình vuông":
-                        lbla.Text = "Cạnh";
-                        txtA.Visible = true;
-                        break;
-                    case "Hình chữ nhật":
-                        lbla.Text = "Cạnh dài";
-                        txtA.Visible = true;
-                        lblb.Text = "Cạnh rộng";
-                        txtB.Visible = true;
-                        break;
-                    case "Hình tam giác":
-                        lbla.Text = "Cạnh 1";
-                        txtA.Visible = true;
-                        lblb.Text = "Cạnh 2";
-                        txtB.Visible = true;
-                        label5.Text = "Cạnh 3";
-                        txtC.Visible = true;
-                        break;
-                    default:
-                        MessageBox.Show("What?");
-                        break;
-                }
-                return;
-            }
+ 
+       
         
 
         private void rdbtVuong_CheckedChanged(object sender, EventArgs e)
         {
 
-            this.label2.Text = "Bán kính";
+            this.label2.Text = "Cạnh";
             this.label2.Visible = true;
             txtA.Visible = true;
             txtA.Enabled = true;
@@ -168,9 +128,27 @@
         {
             txtS.Text = "";
             txtCV.Text = "";
+            txtA.Text = "";
+            txtB.Text = "";
+            txtC.Text = "";
         }
 
-        private void txtA_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtCV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled= true;
+        }
+
+     
+        public bool CountString(string a)
+        {
+            if (a.IndexOf('.') != -1) 
+            return true;
+
+            return false;
+
+        }
+
+        private void txtB_KeyPress(object sender, KeyPressEventArgs e)
         {
 
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
@@ -183,46 +161,66 @@
                 e.Handled = true;
             }
         }
-        public bool CountString(string a)
+
+        private void txtC_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (a.IndexOf('.') != -1) 
-            return true;
 
-            return false;
-
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+            //
+            if (e.KeyChar == '.' && txtA.Text.IndexOf('.') != -1)
+            {
+                e.Handled = true;
+            }
         }
 
-
-
-            private void textBox1_TextChanged(object sender, EventArgs e)
+        private void txtA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
             {
-
+                e.Handled = true;
             }
-
-            private void textBox2_TextChanged(object sender, EventArgs e)
+            //
+            if (e.KeyChar == '.' && txtA.Text.IndexOf('.') != -1)
             {
-
+                e.Handled = true;
             }
+        }
 
-            private void txtC_TextChanged(object sender, EventArgs e)
-            {
+    
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.label2.Text = "Bán kính";
+            this.label2.Visible = true;
+            txtA.Visible = true;
+            txtA.Enabled = true;
 
-            }
+            this.label5.Visible = false;
+            txtC.Visible = false;
+            txtC.Enabled = false;
+            this.label3.Visible = false;
+            txtB.Visible = false;
+            txtB.Enabled = false;
+        }
 
-            private void rdbtTron_Click(object sender, EventArgs e)
-            {
-                this.label2.Text = "Bán kính";
-                this.label2.Visible = true;
-                txtA.Visible = true;
-                txtA.Enabled = true;
+     
 
-                this.label5.Visible = false;
-                txtC.Visible = false;
-                txtC.Enabled = false;
-                this.label3.Visible = false;
-                txtB.Visible = false;
-                txtB.Enabled = false;
+        private void rdbtTron_Click(object sender, EventArgs e)
+        {
+            this.label2.Text = "Bán kính";
+            this.label2.Visible = true;
+            txtA.Visible = true;
+            txtA.Enabled = true;
 
-            }
+            this.label5.Visible = false;
+            txtC.Visible = false;
+            txtC.Enabled = false;
+            this.label3.Visible = false;
+            txtB.Visible = false;
+            txtB.Enabled = false;
+
+        }
         }
     } 
