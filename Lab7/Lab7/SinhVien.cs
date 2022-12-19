@@ -10,19 +10,21 @@ namespace Lab7
     {
 
         string masv, hoten, phai, sdt;
-        public SinhVien(string masv = "", string hoten = "", string phai = "", string sdt = "")
+        public SinhVien(string masv = "", string hoten = "", string sdt = "", string phai = "")
         {
             this.Masv = masv;
             this.Hoten = hoten;
-            this.Phai = phai;
             this.Sdt = sdt;
+            this.Phai = phai;
+            
         }
         public SinhVien(SinhVien t)
         {
             this.Masv = t.Masv;
             this.Hoten = t.Hoten;
-            this.Phai = t.Phai;
             this.Sdt = t.Sdt;
+            this.Phai = t.Phai;
+        
         }
         public string Masv { get => masv; set => masv = value; }
         public string Hoten { get => hoten; set => hoten = value; }

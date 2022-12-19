@@ -35,16 +35,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtHT = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtPhai = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.btDel = new System.Windows.Forms.Button();
             this.btExit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.clMaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clPhai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clSDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbtxtPhai = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,16 +104,9 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(109, 190);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 17);
+            this.label4.Size = new System.Drawing.Size(45, 17);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Phái";
-            // 
-            // txtPhai
-            // 
-            this.txtPhai.Location = new System.Drawing.Point(162, 187);
-            this.txtPhai.Name = "txtPhai";
-            this.txtPhai.Size = new System.Drawing.Size(248, 23);
-            this.txtPhai.TabIndex = 1;
+            this.label4.Text = "Số ĐT";
             // 
             // label5
             // 
@@ -125,16 +114,17 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(109, 219);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 17);
+            this.label5.Size = new System.Drawing.Size(35, 17);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Số ĐT";
+            this.label5.Text = "Phái";
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(162, 216);
+            this.txtSDT.Location = new System.Drawing.Point(162, 187);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(248, 23);
             this.txtSDT.TabIndex = 1;
+            this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_KeyPress);
             // 
             // btDel
             // 
@@ -154,57 +144,42 @@
             this.btExit.TabIndex = 2;
             this.btExit.Text = "Thoát";
             this.btExit.UseVisualStyleBackColor = true;
+            this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clMaSV,
-            this.clHoTen,
-            this.clPhai,
-            this.clSDT});
             this.dataGridView1.Location = new System.Drawing.Point(61, 279);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(503, 160);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // clMaSV
+            // cbtxtPhai
             // 
-            this.clMaSV.HeaderText = "Mã SV";
-            this.clMaSV.Name = "clMaSV";
-            // 
-            // clHoTen
-            // 
-            this.clHoTen.HeaderText = "Họ tên";
-            this.clHoTen.Name = "clHoTen";
-            this.clHoTen.Width = 180;
-            // 
-            // clPhai
-            // 
-            this.clPhai.HeaderText = "Phái";
-            this.clPhai.Name = "clPhai";
-            this.clPhai.Width = 60;
-            // 
-            // clSDT
-            // 
-            this.clSDT.HeaderText = "Số Điện Thoạt";
-            this.clSDT.Name = "clSDT";
-            this.clSDT.Width = 120;
+            this.cbtxtPhai.FormattingEnabled = true;
+            this.cbtxtPhai.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cbtxtPhai.Location = new System.Drawing.Point(162, 216);
+            this.cbtxtPhai.Name = "cbtxtPhai";
+            this.cbtxtPhai.Size = new System.Drawing.Size(248, 23);
+            this.cbtxtPhai.TabIndex = 4;
             // 
             // QLTTSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 475);
+            this.Controls.Add(this.cbtxtPhai);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btExit);
             this.Controls.Add(this.btDel);
             this.Controls.Add(this.btADD);
             this.Controls.Add(this.txtSDT);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtPhai);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtHT);
             this.Controls.Add(this.label3);
@@ -229,15 +204,11 @@
         private Label label3;
         private TextBox txtHT;
         private Label label4;
-        private TextBox txtPhai;
         private Label label5;
         private TextBox txtSDT;
         private Button btDel;
         private Button btExit;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn clMaSV;
-        private DataGridViewTextBoxColumn clHoTen;
-        private DataGridViewTextBoxColumn clPhai;
-        private DataGridViewTextBoxColumn clSDT;
+        private ComboBox cbtxtPhai;
     }
 }

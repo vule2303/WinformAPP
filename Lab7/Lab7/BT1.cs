@@ -1,16 +1,13 @@
 ﻿namespace Lab7
 {
-    public partial class Form1 : Form
+    public partial class BT1 : Form
     {
-        public Form1()
+        public BT1()
         {
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+      
 
         private void btAdd_Click(object sender, EventArgs e)
         {
@@ -44,12 +41,29 @@
 
         private void btExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+       
 
+        private void txtAge_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSalary_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == '.' && txtSalary.Text.IndexOf('.') != -1)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

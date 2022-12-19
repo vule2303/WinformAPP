@@ -1,6 +1,6 @@
 ﻿namespace Lab7
 {
-    partial class Form1
+    partial class BT1
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtaName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtNa = new System.Windows.Forms.TextBox();
             this.btAdd = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.Label();
@@ -38,9 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btClear = new System.Windows.Forms.Button();
             this.btExit = new System.Windows.Forms.Button();
-            this.dtaName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +58,23 @@
             this.dataGridView1.Size = new System.Drawing.Size(427, 243);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            
+            // 
+            // dtaName
+            // 
+            this.dtaName.HeaderText = "Name";
+            this.dtaName.Name = "dtaName";
+            this.dtaName.Width = 180;
+            // 
+            // Age
+            // 
+            this.Age.HeaderText = "Age";
+            this.Age.Name = "Age";
+            // 
+            // Salary
+            // 
+            this.Salary.HeaderText = "Salary";
+            this.Salary.Name = "Salary";
             // 
             // txtNa
             // 
@@ -93,6 +109,7 @@
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(203, 23);
             this.txtAge.TabIndex = 1;
+            this.txtAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAge_KeyPress);
             // 
             // label1
             // 
@@ -110,6 +127,7 @@
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(203, 23);
             this.txtSalary.TabIndex = 1;
+            this.txtSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalary_KeyPress);
             // 
             // label2
             // 
@@ -141,22 +159,6 @@
             this.btExit.UseVisualStyleBackColor = true;
             this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
-            // dtaName
-            // 
-            this.dtaName.HeaderText = "Name";
-            this.dtaName.Name = "dtaName";
-            this.dtaName.Width = 180;
-            // 
-            // Age
-            // 
-            this.Age.HeaderText = "Age";
-            this.Age.Name = "Age";
-            // 
-            // Salary
-            // 
-            this.Salary.HeaderText = "Salary";
-            this.Salary.Name = "Salary";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -174,7 +176,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Lab7_12104056_LEDUCTUANVU";
-            this.Load += new System.EventHandler(this.Form1_Load);
+       
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
