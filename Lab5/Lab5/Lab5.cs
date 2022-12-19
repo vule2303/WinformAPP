@@ -32,5 +32,28 @@ namespace Lab5
             Bangcuuchuong a = new Bangcuuchuong();
             a.ShowDialog();
         }
+
+        private void giảiPTBậc1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GPT1 a = new GPT1();
+            a.ShowDialog();
+        }
+
+        private void gảiiPTBậc2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CPT2 a = new CPT2();
+            a.ShowDialog();
+        }
+
+        private void tínhChuViVàDiệnTíchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TinhCVvDT a = new TinhCVvDT();
+            a.ShowDialog();
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
