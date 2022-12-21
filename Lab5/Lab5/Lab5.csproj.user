@@ -4,16 +4,16 @@
     <Compile Update="Bangcuuchuong.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GPB2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GTPB1cs.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="TinhCVvDT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="CPT2.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GPT1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Lab5.cs">

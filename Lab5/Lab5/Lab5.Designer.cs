@@ -36,7 +36,6 @@
             this.gảiiPTBậc2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tínhChuViVàDiệnTíchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bảngCửuChươngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thôngTinTácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +48,7 @@
             this.btReturn.TabIndex = 1;
             this.btReturn.Text = "Quay về";
             this.btReturn.UseVisualStyleBackColor = false;
+            this.btReturn.Click += new System.EventHandler(this.btReturn_Click);
             // 
             // btExit
             // 
@@ -77,8 +77,7 @@
             this.giảiPTBậc1ToolStripMenuItem,
             this.gảiiPTBậc2ToolStripMenuItem,
             this.tínhChuViVàDiệnTíchToolStripMenuItem,
-            this.bảngCửuChươngToolStripMenuItem,
-            this.thôngTinTácGiảToolStripMenuItem});
+            this.bảngCửuChươngToolStripMenuItem});
             this.cHƯƠNG1ToolStripMenuItem.Name = "cHƯƠNG1ToolStripMenuItem";
             this.cHƯƠNG1ToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.cHƯƠNG1ToolStripMenuItem.Text = "CHƯƠNG 1";
@@ -111,12 +110,6 @@
             this.bảngCửuChươngToolStripMenuItem.Text = "4. In ra Bảng cửu chương ";
             this.bảngCửuChươngToolStripMenuItem.Click += new System.EventHandler(this.bảngCửuChươngToolStripMenuItem_Click);
             // 
-            // thôngTinTácGiảToolStripMenuItem
-            // 
-            this.thôngTinTácGiảToolStripMenuItem.Name = "thôngTinTácGiảToolStripMenuItem";
-            this.thôngTinTácGiảToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.thôngTinTácGiảToolStripMenuItem.Text = "5. Thông tin tác giả";
-            // 
             // Lab5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -147,6 +140,5 @@
         private ToolStripMenuItem giảiPTBậc1ToolStripMenuItem;
         private ToolStripMenuItem gảiiPTBậc2ToolStripMenuItem;
         private ToolStripMenuItem tínhChuViVàDiệnTíchToolStripMenuItem;
-        private ToolStripMenuItem thôngTinTácGiảToolStripMenuItem;
     }
 }

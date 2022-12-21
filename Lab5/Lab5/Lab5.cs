@@ -16,17 +16,6 @@ namespace Lab5
         {
             InitializeComponent();
         }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
         private void bảngCửuChươngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Bangcuuchuong a = new Bangcuuchuong();
@@ -35,13 +24,13 @@ namespace Lab5
 
         private void giảiPTBậc1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GPT1 a = new GPT1();
+            GTPB1cs a = new GTPB1cs();
             a.ShowDialog();
         }
 
         private void gảiiPTBậc2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CPT2 a = new CPT2();
+            GPB2 a = new GPB2();
             a.ShowDialog();
         }
 
@@ -52,6 +41,11 @@ namespace Lab5
         }
 
         private void btExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btReturn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
